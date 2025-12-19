@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Online Bus Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React application for booking bus tickets online.
+
+## Features
+
+- **User Authentication Options**: Login, Register, or Continue as Guest
+- **Route Search**: Search buses between cities with date selection
+- **Bus Listing**: View available buses with details (departure, arrival, price, available seats)
+- **Seat Selection**: Interactive seat selection with visual feedback
+- **Booking Confirmation**: Complete booking with passenger details and price calculation
+- **Responsive Design**: Works on desktop and mobile devices
+
+## Technologies Used
+
+- React 19.2.3
+- React DOM 19.2.3
+- CSS3 for styling
+- React Hooks (useState) for state management
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository or navigate to the project directory
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/
+│   ├── Login.jsx          # Login/Register/Guest options
+│   ├── SearchForm.jsx     # Route and date search
+│   ├── BusList.jsx        # Display available buses
+│   ├── SeatSelection.jsx  # Interactive seat selection
+│   └── BookingForm.jsx    # Passenger details and confirmation
+├── App.js                 # Main application component
+├── App.css               # Application styles
+└── index.js              # Application entry point
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage Flow
 
-### `npm test`
+1. **Welcome Screen**: Choose to login, register, or continue as guest
+2. **Search**: Select departure city, destination city, and travel date
+3. **Bus Selection**: Browse available buses and select preferred option
+4. **Seat Selection**: Choose seats from the interactive seat map
+5. **Booking**: Enter passenger details and confirm booking
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features in Detail
 
-### `npm run build`
+### Search Form
+- Dropdown selection for 10 major Indian cities
+- Date picker for travel date
+- Form validation to ensure all fields are filled
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Bus Listing
+- Mock data with 3 different bus types (Express, Luxury, Standard)
+- Shows departure/arrival times, price, and available seats
+- Easy selection with dedicated buttons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Seat Selection
+- 20-seat layout in a 5x4 grid
+- Visual feedback for selected seats
+- Multiple seat selection allowed
+- Proceed only when at least one seat is selected
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Booking Confirmation
+- Comprehensive booking summary
+- Passenger information form with validation
+- Total price calculation
+- Success confirmation with booking details
 
-### `npm run eject`
+## Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app uses a yellow and blue color scheme that can be easily customized in `App.css`. Key color variables:
+- Primary: #ffc107 (Yellow)
+- Secondary: #0073e6 (Blue)
+- Background: #fff3cd (Light Yellow)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Backend integration for real bus data
+- Payment gateway integration
+- User authentication system
+- Booking history and management
+- Email/SMS notifications
+- Real-time seat availability
+- Route maps and bus tracking
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the MIT License.
